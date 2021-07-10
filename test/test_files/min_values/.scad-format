@@ -1,0 +1,15 @@
+tab before comment	=	false
+pad before comment	=	0
+pad comment start	=	0
+operator padding	=	0
+pad before brace	=	0
+pad before bracket	=	0
+pad inside bracket	=	0
+pad inside square	=	0
+pad before angular	=	0
+pad inside angular	=	0
+comma padding		=	0
+function padding	=	0
+one function per line	=	0
+indent type		=	spaces
+indent spaces		=	0
