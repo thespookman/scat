@@ -1,8 +1,49 @@
-# scat
+# Scat
 Openscad code formatter
 
 ## Depends
 Scat depends on Fig for reading the format config files. Fig can be obtained from https://github.com/thespookman/fig
+
+Building Scat will also need flex, which is included by default in many linux distros.
+
+Building Fig will need bison.
+
+## Build
+
+Scat uses g++ by default, but can probably be compiled with other C++ compilers, just edit the Makefile if you want.
+
+1. Download the repo  
+```
+git clone https://github.com/thespookman/scat.git
+```
+2. Enter the lib directory
+```
+cd scat/lib
+```
+3. Download Fig
+```
+git clone https://github.com/thespookman/fig.git
+```
+4. Enter the Fig directory
+```
+cd fig
+```
+5. Build Fig
+```
+make all
+```
+6. Move fig library to Scad's lib.
+```
+mv libfig.a include/fig.h ..
+```
+7. Return to Scad's directory.
+```
+cd ../..
+```
+8. Build Scad
+```
+make all
+```
 
 ## Usage
 
