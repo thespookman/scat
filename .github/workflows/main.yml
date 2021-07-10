@@ -35,6 +35,11 @@ jobs:
           make all
           mv libfig.a include/fig.h ..
 
+      - name: Install openscad
+        run: |
+          sudo apt update
+          sudo apt install openscad
+
       - name: Build
         run: |
           cd $GITHUB_WORKSPACE
