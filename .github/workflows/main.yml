@@ -28,6 +28,7 @@ jobs:
       - name: Get Fig
         run: |
           cd $GITHUB_WORKSPACE
+          mkdir lib
           cd lib
           git clone https://github.com/thespookman/fig.git
           cd fig
