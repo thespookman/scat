@@ -29,16 +29,6 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
        
-      - name: Get Fig
-        run: |
-          cd $GITHUB_WORKSPACE
-          mkdir lib
-          cd lib
-          git clone https://github.com/thespookman/fig.git
-          cd fig
-          make all
-          mv libfig.a include/fig.h ..
-
       - name: Install openscad
         run: |
           sudo apt update
