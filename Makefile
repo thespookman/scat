@@ -14,6 +14,7 @@ all: $(OUTPUT)
 SRC = lexer.yy.c src/main.cpp
 
 lib/libfig.a:
+	mkdir -p lib
 	cd lib && git clone https://github.com/thespookman/fig.git
 	cd lib/fig && make all
 	cp lib/fig/libfig.a lib/fig/include/fig.h lib
