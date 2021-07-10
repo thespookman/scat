@@ -13,6 +13,13 @@ all: $(OUTPUT)
 
 SRC = lexer.yy.c src/main.cpp
 
+lib/libfig.a:
+	mkdir -p lib
+	cd lib && git clone https://github.com/thespookman/fig.git
+	cd lib/fig && make all
+	cp lib/fig/libfig.a lib/fig/include/fig.h lib
+
+
 $(OUTPUT): $(SRC) lib/libfig.a lib/fig.h 
 	$(CC) $(COMPILER_FLAGS) $(SRC) -o $@ $(INCLUDES) $(LINKER_FLAGS)
 
@@ -26,4 +33,4 @@ test: $(OUTPUT)
 
 .PHONY: clean
 clean:
-	rm lexer.yy.c $(OUTPUT)
+	rm lexer.yy.c $(OUTPUT) lib/libfig.a lib/fig.h
